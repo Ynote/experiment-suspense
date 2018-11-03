@@ -1,7 +1,9 @@
-import React, { Component } from 'react'
+import React, { lazy, Suspense, Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import Image from './Image'
+//import Image from './Image'
+
+const ImageContainer = lazy(() => import('./Image'))
 
 class ImageCard extends Component {
   static propTypes = {
@@ -17,12 +19,28 @@ class ImageCard extends Component {
     height: '200px',
   }
 
+  state = {
+    src: null,
+  }
+
+  componentDidMount() {
+    const downloadingImage = new Image()
+    downloadingImage.src = this.props.src
+    downloadingImage.onload = event => {
+      this.setState({ src: event.path[0].src })
+    }
+  }
+
   render() {
     const { src, alt, width, height } = this.props
 
     return(
       <figure style={ styles }>
-        <Image src={src} alt={alt} />
+        {this.state.src && (
+          <Suspense fallback={<div>Loading image…</div>}>
+            <ImageContainer src={this.state.src} alt={alt} />
+          </Suspense>
+        )}
       </figure>
     )
   }

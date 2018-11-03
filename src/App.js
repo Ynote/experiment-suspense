@@ -1,5 +1,7 @@
-import React, { Fragment, Component } from 'react';
-import Gallery from './Gallery'
+import React, { lazy, Suspense, Component } from 'react';
+//import Gallery from './Gallery'
+
+const Gallery = lazy(() => import('./Gallery'))
 
 class App extends Component {
   constructor(props) {
@@ -61,9 +63,9 @@ class App extends Component {
           </button>
         )}
         {pictures && (
-          <Fragment>
+          <Suspense fallback={<div>Loading gallery…</div>}>
             <Gallery pictures={pictures} />
-          </Fragment>
+          </Suspense>
         )}
       </div>
     );

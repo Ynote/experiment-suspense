@@ -15,7 +15,11 @@ export default class Image extends Component {
     const { src, alt } = this.props
 
     return (
-      <img src={src} alt={alt} style={ { width: '100%' } } />
+      <img
+        src={src}
+        alt={alt}
+        style={ { width: '100%' } }
+      />
     )
   }
 }
