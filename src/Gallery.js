@@ -1,7 +1,31 @@
-import React, { Component } from 'react'
+import React, { lazy, Suspense, Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import ImageCard from './ImageCard'
+
+const ImageCard = lazy(() => import('./ImageCard'))
+
+class Loader extends Component {
+  static propTypes = {
+    width: PropTypes.string,
+    height: PropTypes.string,
+  }
+
+  static defaultProp = {
+    width: '200px',
+    height: '200px',
+  }
+
+  render() {
+    const { width, height } = this.props
+    const loaderStyles = { width: '400px', height: '400px' }
+
+    return (
+      <div style={ loaderStyles }>
+        Loading…
+      </div>
+    )
+  }
+}
 
 class Gallery extends Component {
   static propTypes = {
@@ -18,13 +42,17 @@ class Gallery extends Component {
             const { id, src, alt, caption } = picture
 
             return (
-              <ImageCard
-                key={id}
-                src={src}
-                alt={alt}
-                width={400}
-                height={400}
-              />
+              <Suspense
+                fallback={<Loader />}
+              >
+                <ImageCard
+                  key={id}
+                  src={src}
+                  alt={alt}
+                  width={400}
+                  height={400}
+                />
+              </Suspense>
             )
           })
         }
