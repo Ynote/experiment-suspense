@@ -2,6 +2,7 @@ import React, { lazy, Suspense, Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
 
+// Testing lazy import
 const ImageCard = lazy(() => import('./ImageCard'))
 
 class Loader extends Component {

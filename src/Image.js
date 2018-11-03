@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-export default class ImageCard extends Component {
+export default class Image extends Component {
   static propTypes = {
     src: PropTypes.string.isRequired,
     alt: PropTypes.string,
