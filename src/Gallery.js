@@ -15,15 +15,15 @@ class Gallery extends Component {
       <div style={ styles }>
         {
           pictures.map(picture => {
-            const { id, src, alt, width, height, caption } = picture
+            const { id, src, alt, caption } = picture
 
             return (
               <ImageCard
                 key={id}
                 src={src}
                 alt={alt}
-                width={width}
-                height={height}
+                width={400}
+                height={400}
               />
             )
           })

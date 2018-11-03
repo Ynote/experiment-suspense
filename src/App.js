@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 import Gallery from './Gallery'
 
 class App extends Component {
@@ -43,8 +43,6 @@ class App extends Component {
           id: instagramItem.id,
           src: instagramItem.images.standard_resolution.url,
           caption: instagramItem.caption.text,
-          height: instagramItem.images.standard_resolution.height,
-          width: instagramItem.images.standard_resolution.width,
         }
       ))
 
@@ -62,7 +60,11 @@ class App extends Component {
             Show Insta
           </button>
         )}
-        {pictures && <Gallery pictures={pictures} />}
+        {pictures && (
+          <Fragment>
+            <Gallery pictures={pictures} />
+          </Fragment>
+        )}
       </div>
     );
   }
