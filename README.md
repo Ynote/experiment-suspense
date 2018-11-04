@@ -11,8 +11,8 @@ The app needs your permissions to read your [Instagram](https://www.instagram.co
 
 ## Results :memo:
 
-- `React.lazy` coupled with `Suspense` is great for performance purpose.
-- **I am looking forward to test the fetchers from the future!** (cf. https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html)
+- `React.lazy` coupled with `Suspense` is great for performance purpose. I can have lighter final bundle and, for big applications, I can deal direcly with code-splitting with React instead of having a complex strategy with [Webpack](https://webpack.js.org/) bundling.
+- **I am looking forward to test the fetchers from the future!** (cf. https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html). I tried to [fetch something before my dynamic import](https://github.com/Ynote/experiment-suspense/pull/1), it was a fail.
 - Instagram API is a mess: 
   - there are few endpoints (you cannot even fetch the last pictures of a specific user, except yourself!),
   - the sandbox usage is really restritive.
@@ -39,8 +39,8 @@ The app needs your permissions to read your [Instagram](https://www.instagram.co
 
 ## Requirements
 
-- React 16.6
-- Having an Instagram account (with some pictures) and a developer app linked to it
+- [React 16.6](https://www.npmjs.com/package/react/v/16.6.0)
+- Having an Instagram account (with [some pictures](https://www.instagram.com/Ynote_hk/)) and a [developer app](https://www.instagram.com/developer/) linked to it
 
 ## Usage
 
