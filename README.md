@@ -15,6 +15,10 @@ lazy feature that has been released with [React
   - there are few endpoints (you cannot even fetch the last pictures of a specific user, except yourself!),
   - the sandbox usage is really restritive.
 
+
+<img width="1372" alt="screen shot 2018-11-04 at 09 43 21" src="https://user-images.githubusercontent.com/548778/47962001-26d20300-e016-11e8-9fbb-de8c7c8ceb4b.png">
+
+
 ## Steps
 
 ### Create a React app with asynchronous data
