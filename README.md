@@ -16,7 +16,7 @@ lazy feature that has been released with [React
   - the sandbox usage is really restritive.
 
 
-<img width="1372" alt="screen shot 2018-11-04 at 09 43 21" src="https://user-images.githubusercontent.com/548778/47962001-26d20300-e016-11e8-9fbb-de8c7c8ceb4b.png">
+<img width="1420" alt="screen shot 2018-11-04 at 10 46 26" src="https://user-images.githubusercontent.com/548778/47962561-ed51c580-e01e-11e8-924f-a4b348e56a80.png">
 
 
 ## Steps
@@ -51,4 +51,5 @@ yarn start
 
 - https://reactjs.org/docs/code-splitting.html#reactlazy
 - https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html
+- https://github.com/facebook/react/tree/master/fixtures/unstable-async/suspense
 - https://www.instagram.com/developer
