@@ -46,3 +46,9 @@ Start the app locally:
 ```
 yarn start
 ```
+
+## Resources
+
+- https://reactjs.org/docs/code-splitting.html#reactlazy
+- https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html
+- https://www.instagram.com/developer
