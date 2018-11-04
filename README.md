@@ -7,7 +7,7 @@ Suspense](https://reactjs.org/blog/2018/10/23/react-v-16-6.html#reactlazy-code-s
 lazy feature that has been released with [React
 16.6](https://reactjs.org/blog/2018/10/23/react-v-16-6.html).
 
-The app needs you permissions to read your [Instagram](https://www.instagram.com/) feed and displays a wall with your last 20 pictures.
+The app needs your permissions to read your [Instagram](https://www.instagram.com/) feed and displays a wall with your last 20 pictures.
 
 ## Results :memo:
 
