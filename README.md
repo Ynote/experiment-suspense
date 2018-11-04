@@ -11,7 +11,7 @@ lazy feature that has been released with [React
 
 ### Create a React app with asynchronous data
 - Fetch data from Instagram: some ugly code without any security logic (¯\_(ツ)_/¯ it's an experiment!_).
-- Create differents components to use dynamic imports: `Gallery`, `ImageCard` and `Image`.
+- Create differents components to anticipate dynamic imports: `Gallery`, `ImageCard` and `Image`.
 
 ### Use `React.lazy` to import lazily some components
 - Handle [traditionnal `src` lazy loading](https://github.com/Ynote/experiment-suspense/blob/master/src/ImageCard.js#L26) in `ImageCard` component.
@@ -22,6 +22,7 @@ lazy feature that has been released with [React
 
 ### Try to use `React.lazy` to fetch data before dynamic import
 - Total fail: cf. [Testing PR](https://github.com/Ynote/experiment-suspense/pull/1)
+- **I am waiting for the fetchers from the future!** (cf. https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html)
 
 ## Usage
 
