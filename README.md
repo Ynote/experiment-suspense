@@ -7,6 +7,14 @@ Suspense](https://reactjs.org/blog/2018/10/23/react-v-16-6.html#reactlazy-code-s
 lazy feature that has been released with [React
 16.6](https://reactjs.org/blog/2018/10/23/react-v-16-6.html).
 
+## Results :memo:
+
+- `React.lazy` coupled with `Suspense` is great for performance purpose.
+- **I am looking forward to test the fetchers from the future!** (cf. https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html)
+- Instagram API is a mess: 
+  - there are few endpoints (you cannot even fetch the last pictures of a specific user, except yourself!),
+  - the sandbox usage is really restritive.
+
 ## Steps
 
 ### Create a React app with asynchronous data
@@ -20,9 +28,13 @@ lazy feature that has been released with [React
   - The [`<Suspense>` component and its `fallback` prop](https://github.com/Ynote/experiment-suspense/blob/master/src/App.js#L66) is not so useful for my purpose, it just renders for the time of the dynamic import.
 - Same for the [lazy import of `Image`](https://github.com/Ynote/experiment-suspense/blob/master/src/ImageCard.js#L6) in `ImageCard`.
 
-### Try to use `React.lazy` to fetch data before dynamic import
-- Total fail: cf. [Testing PR](https://github.com/Ynote/experiment-suspense/pull/1)
-- **I am waiting for the fetchers from the future!** (cf. https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html)
+### Try to use `React.lazy` to fetch data before dynamic import 
+- Total fail: cf. [Testing PR](https://github.com/Ynote/experiment-suspense/pull/1) :boom:
+
+## Requirements
+
+- React 16.6
+- Having an Instagram account (with some pictures) and a developer app linked to it
 
 ## Usage
 
