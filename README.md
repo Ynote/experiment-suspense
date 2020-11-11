@@ -1,3 +1,5 @@
+> This project has moved to https://gitlab.com/ynote_hk/experiment-suspense.
+
 # Experiment Suspense
 
 > Experiment from November 2018
